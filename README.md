@@ -1,4 +1,4 @@
-#INT_EXT_PRED
+# INT_EXT_PRED
 ## Overview
 This repository provides the necessary source code, run files and diagnostic scripts to recreate the experiments in our manuscript "The active and passive roles of the ocean in generating basin-scale heat content variability" Also required are model outputs from the IPSL-CM5a run used to create our stochastic representation.
 There are five directories:
