@@ -1,0 +1,6 @@
+
+Information on obtaining coupled model outputs is given in IPSL_OUTPUT.txt
+Information on obtaining eddy-permitting climatological ocean model files is given in NEMOv3.5_SRC.txt
+
+Scripts inside NEMO_ORCA025_RUN_SCRIPTS can be used to reproduce our two-decade climatological run
+Our specific modifications to NEMO v3.5 are found in NEMO_ORCA025_RUN_SCRIPTS/MY_SRC

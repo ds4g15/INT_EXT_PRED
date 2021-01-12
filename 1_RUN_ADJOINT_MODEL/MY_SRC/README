@@ -1,0 +1,28 @@
+################################################################################
+To install this configuration, a working NEMO 3.4 is required, along with ORCA2 
+input files such as forcing. These are found at the addresses below.
+
+NEMO 3.4 SRC: https://forge.ipsl.jussieu.fr/nemo/svn/NEMO/releases/release-3.4
+ORCA2 INPUT: https://doi.org/10.5281/zenodo.1471702
+
+For a first time NEMO install, the readme at 
+https://github.com/ds4g15/ConTraPTION
+should be of some use. Please also feel free to contact me directly
+(D.Stephenson@noc.soton.ac.uk)
+
+Once NEMO is downloaded, create a configuration using (customise as needed):
+
+./makenemo -d "OPATAM_SRC LIM_SRC_2 OPA_SRC" -n TAM_PRED -m <ARCH> \
+add_key "key_mpp_mpi key_mpp_rep key_nosignedzero key_tam key_diainstant" \
+del_key "key_iomput key_zdfddm"
+
+where <ARCH> is your machine's architecture, located in the ARCH/ directory
+
+Then replace TAM_PRED/MY_SRC with the MY_SRC directory provided, 
+containing modifications necessary to reproduce our experiments, then
+compile again. The nemo.exe and nemo_tam.exe files can be found in 
+/PAS_ACT_TAM/BLD/bin/
+
+for parallel systems the output of NEMO 3.4 is
+split into tiles, which need to be rejoined. This is done using the 
+TOOLS/REBUILD_NEMO/ directory. This tool will also need to be compiled.

@@ -1,0 +1,12 @@
+First, run a nonlinear model trajectory using
+	namelist.TRAJ60
+	namelist_ice.TRAJ60
+	TRAJ60.sh
+Modify job_JOBNAME.sh according to local system requirements (see comments in script).
+
+Then can generate experiment directories for the different adjoint simulations using
+     mkdirs.sh
+which makes copies of
+      job_JOBNAME.sh
+      namelist.TEMPLATE
+in directories specific to each adjoint experiment
