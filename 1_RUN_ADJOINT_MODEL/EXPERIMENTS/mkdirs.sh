@@ -8,7 +8,7 @@ for AVG in {year_average,month_average,decade_average};do
     cd "${AVG}"
     for CF in {MVT_ST,MVT_SP,MHT_SP,MHT_ST,OHC_ST,OHC_SP};do
 	cp -rp "${WD}"/job_JOBNAME.sh ${CF}/
-	cp -rp "${WD}"/namelsit.TEMPLATE ${CF}/
+	cp -rp "${WD}"/namelist.TEMPLATE ${CF}/
 	cp "${WD}"/ADJOINT_COST_FUNCTIONS/COST_FN_${CF}.py ${CF}/
 	cd "${CF}"
 	rename JOBNAME "${CF}" *.*
